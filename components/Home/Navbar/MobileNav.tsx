@@ -1,7 +1,7 @@
 'use client'
 import { NavLinks } from '@/constant/constants'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import {CgClose} from 'react-icons/cg'
 const MobileNav = ({showNav, closeNav} : {showNav: boolean, closeNav: () => void}) => {
 
