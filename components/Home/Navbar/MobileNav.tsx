@@ -1,7 +1,7 @@
 'use client'
 import { NavLinks } from '@/constant/constants'
-import Link from 'next/link'
 import React from 'react'
+import { Link as ScrollLink } from 'react-scroll'
 import {CgClose} from 'react-icons/cg'
 const MobileNav = ({showNav, closeNav} : {showNav: boolean, closeNav: () => void}) => {
 
@@ -13,9 +13,9 @@ const MobileNav = ({showNav, closeNav} : {showNav: boolean, closeNav: () => void
     <div className={`${showNav ? "flex" :  "hidden"} text-white w-[88%] sm:w-[60%] bg-blue-900 space-y-6 z-[1050] justify-center flex-col h-full fixed transform transition-all duration-500 delay-300`}>
       {NavLinks.map((link, index) => {
         return (
-          <Link key={index} href={link.url}><p className='text-white w-fit text-xl ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px] '>
+          <ScrollLink key={index} to={link.url}><p className='text-white w-fit text-xl ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px] '>
             {link.Label}
-            </p></Link>
+            </p></ScrollLink>
         )
       })}
       {/* Cross icon for close the navbar */}
